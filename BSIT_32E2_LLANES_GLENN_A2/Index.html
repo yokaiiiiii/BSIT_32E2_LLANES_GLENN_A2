@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glenn Llanes's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="LOA.png" alt="Lyceum of Alabang Logo" class="school-logo">
+        </div>
+        <div class="header-text">
+            <h1>Glenn Llanes</h1>
+            <p>Computer Studies</p>
+            <p>BSIT | 32E2</p>
+        </div>
+        <div class="logo-container">
+            <img src="CCS.png" alt="CCS Logo" class="ccs-logo">
+        </div>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome!</h2>
+        <p>Hello! My name is Glenn Llanes, and I am a 3rd-year student. I'm passionate about all things tech, and one of my biggest hobbies is modding mechanical keyboards. I love customizing my keyboards, from choosing different switches to designing unique keycaps and layouts. It’s a creative and hands-on process that allows me to combine my interest in technology with my love for personalizing my workspace. I am excited to share my academic journey and experiences with you!</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>In addition to modding keyboards, I’m always exploring new tech gadgets and innovations. Whether it's the latest gaming peripherals, new tech trends, or experimenting with other DIY tech projects, I love staying on top of what’s new and finding ways to make the most out of my tech setup.</p>
+        <p>Beyond keyboards and tech, I enjoy learning about how these gadgets work and how they can improve productivity and creativity. My passion for technology continues to inspire me to try new things and push the limits of what I can create!</p>
+
+        <h3>Education</h3>
+        <ul>
+            <li>College - Lyceum of Alabang</li>
+            <li>Senior High - Informatics Alabang [with honors]</li>
+            <li>Junior High - MBHS Sucat Annex [with honors]</li>
+        </ul>
+
+        <h3>School Activities</h3>
+        <ul>
+            <li>2024 Mobile Legends Champion - College of Computer Studies</li>
+            <li>2023 Mobile Legends Champion - College of Computer Studies</li>
+            <li>2022 Mobile Legends Champion - College of Computer Studies</li>
+            <li>2nd Runner Up - Mr. & Ms. Lyceum of Alabang 2024</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>Problem Solving</li>
+            <li>Teamwork</li>
+            <li>Technical Skills</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Email: <a href="mailto:glnnllnsgmail.com.com">glnnllnsgmail.com.com</a></li>
+            <li>Phone: 09493990704</li>
+            <li>Social Media: <a href="https://www.facebook.com/llanesglenn0">Facebook</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Glenn Llanes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Intersection Observer to detect when sections are in view
+        const sections = document.querySelectorAll('section');
+
+        const observerOptions = {
+            threshold: 0.5 // When 50% of the section is in view, trigger animation
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bubble-animation');
+                    observer.unobserve(entry.target); // Stop observing once animation is triggered
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
